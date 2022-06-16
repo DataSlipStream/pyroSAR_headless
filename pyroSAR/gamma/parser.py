@@ -693,7 +693,8 @@ def autoparse():
     True
     """
     home = ExamineGamma().home
-    target = os.path.join(os.path.expanduser('~'), '.pyrosar', 'gammaparse')
+    #target = os.path.join(os.path.expanduser('~'), '.pyrosar', 'gammaparse')
+    target = '/work/dc129/dc129/shared/.pyrosar/gammaparse'
     if not os.path.isdir(target):
         os.makedirs(target)
     for module in finder(home, ['[A-Z]*'], foldermode=2):

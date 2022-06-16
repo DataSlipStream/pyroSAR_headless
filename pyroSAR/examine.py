@@ -63,7 +63,8 @@ class ExamineSnap(object):
         
         # if the auxdatapath attribute was not yet set, create a default directory
         if not hasattr(self, 'auxdatapath'):
-            self.auxdatapath = os.path.join(os.path.expanduser('~'), '.snap', 'auxdata')
+            #self.auxdatapath = os.path.join(os.path.expanduser('~'), '.snap', 'auxdata')
+            self.auxdatapath = '/mnt/beegfs/pod01/slipstream/snap_auxdata'
             os.makedirs(self.auxdatapath, exist_ok=True)
         
         # if the SNAP auxdata properties attribute was not yet identified,
@@ -338,6 +339,7 @@ class ExamineSnap(object):
         system = platform.system()
         if system in ['Linux', 'Darwin']:
             path = os.path.join(os.path.expanduser('~'), '.snap', 'system')
+            path = '/mnt/beegfs/pod01/slipstream/snap_system'
         elif system == 'Windows':
             path = os.path.join(os.environ['APPDATA'], 'SNAP')
         else:

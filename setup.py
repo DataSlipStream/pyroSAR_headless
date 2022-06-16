@@ -2,7 +2,8 @@ from setuptools import setup, find_packages
 import os
 
 # Create .pyrosar in HOME - Directory
-directory = os.path.join(os.path.expanduser('~'), '.pyrosar')
+#directory = os.path.join(os.path.expanduser('~'), '.pyrosar')
+directory = '/work/.dc129/dc129/shared/.pyrosar'
 os.makedirs(directory, exist_ok=True)
 
 directory = os.path.abspath(os.path.dirname(__file__))

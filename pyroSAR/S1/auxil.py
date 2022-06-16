@@ -102,7 +102,8 @@ class OSV(object):
             try:
                 auxdatapath = ExamineSnap().auxdatapath
             except AttributeError:
-                auxdatapath = os.path.join(os.path.expanduser('~'), '.snap', 'auxdata')
+                #auxdatapath = os.path.join(os.path.expanduser('~'), '.snap', 'auxdata')
+                auxdatapath = '/mnt/beegfs/pod01/slipstream/snap_auxdata'
             osvdir = os.path.join(auxdatapath, 'Orbits', 'Sentinel-1')
         self.outdir_poe = os.path.join(osvdir, 'POEORB')
         self.outdir_res = os.path.join(osvdir, 'RESORB')

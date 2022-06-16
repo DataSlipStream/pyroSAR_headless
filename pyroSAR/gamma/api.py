@@ -20,7 +20,8 @@ from .parser import autoparse
 try:
     autoparse()
     
-    sys.path.insert(0, os.path.join(os.path.expanduser('~'), '.pyrosar'))
+    #sys.path.insert(0, os.path.join(os.path.expanduser('~'), '.pyrosar'))
+    sys.path.insert(0, '/work/dc129/dc129/shared/.pyrosar')
     
     try:
         from gammaparse import *

@@ -397,7 +397,8 @@ class DEMHandler:
         try:
             self.auxdatapath = ExamineSnap().auxdatapath
         except AttributeError:
-            self.auxdatapath = os.path.join(os.path.expanduser('~'), '.snap', 'auxdata')
+            #self.auxdatapath = os.path.join(os.path.expanduser('~'), '.snap', 'auxdata')
+            self.auxdatapath = '/mnt/beegfs/pod01/slipstream/snap_auxdata'
     
     def __enter__(self):
         return self
@@ -973,7 +974,8 @@ def get_egm_lookup(geoid, software):
         try:
             auxdatapath = ExamineSnap().auxdatapath
         except AttributeError:
-            auxdatapath = os.path.join(os.path.expanduser('~'), '.snap', 'auxdata')
+            #auxdatapath = os.path.join(os.path.expanduser('~'), '.snap', 'auxdata')
+            auxdatapath = '/mnt/beegfs/pod01/slipstream/snap_auxdata'
         local = os.path.join(auxdatapath, 'dem', 'egm96', 'ww15mgh_b.zip')
         os.makedirs(os.path.dirname(local), exist_ok=True)
         if not os.path.isfile(local):

@@ -193,7 +193,8 @@ class ConfigHandler(metaclass=Singleton):
     # __setter = ["etc", "auxdata"]
     
     def __init__(self):
-        path = os.path.join(os.path.expanduser('~'), '.pyrosar')
+        #path = os.path.join(os.path.expanduser('~'), '.pyrosar')
+        path = self.auxdatapath = '/work/dc129/dc129/shared/.pyrosar'
         
         self.__GLOBAL = {
             'path': path,

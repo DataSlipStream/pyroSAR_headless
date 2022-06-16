@@ -31,8 +31,8 @@ def test_handler(auxdata_dem_cases):
 
 def test_autoload(auxdata_dem_cases, travis):
     # delete all target files to test downloading them again
-    home = os.path.expanduser('~')
-    demdir = os.path.join(home, '.snap', 'auxdata', 'dem')
+    #home = os.path.expanduser('~')
+    demdir = '/mnt/beegfs/pod01/slipstream/snap_auxdata/dem'
     locals = [os.path.join(demdir, x, os.path.basename(y[0])) for x, y in auxdata_dem_cases]
     for item in locals:
         if os.path.isfile(item):

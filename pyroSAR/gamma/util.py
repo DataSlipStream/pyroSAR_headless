@@ -496,7 +496,8 @@ def correctOSV(id, directory, osvdir=None, osvType='POE', timeout=20, logpath=No
         try:
             auxdatapath = ExamineSnap().auxdatapath
         except AttributeError:
-            auxdatapath = os.path.join(os.path.expanduser('~'), '.snap', 'auxdata')
+            #auxdatapath = os.path.join(os.path.expanduser('~'), '.snap', 'auxdata')
+            auxdatapath = '/mnt/beegfs/pod01/slipstream/snap_auxdata'
         osvdir = os.path.join(auxdatapath, 'Orbits', 'Sentinel-1')
     try:
         id.getOSV(osvdir, osvType, timeout=timeout)
